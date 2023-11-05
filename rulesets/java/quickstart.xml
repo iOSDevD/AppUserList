@@ -12,5 +12,6 @@
 
     <!-- Your rules will come here -->
     <rule ref="category/java/codestyle.xml/AtLeastOneConstructor"></rule>
+    <rule ref="category/java/security.xml/HardCodedCryptoKey" />
 
 </ruleset>
