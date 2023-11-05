@@ -1,0 +1,30 @@
+package com.userlist.home;
+
+public class InvalidProductException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String productId;
+	private String productMessage;
+	
+	public InvalidProductException(String productId,String productMessage){
+		this.productId=productId;
+		this.productMessage=productMessage;
+	}
+	
+	public String getDataMessage() {
+		return productMessage;
+	}
+	public void setDataMessage(String productMessage) {
+		this.productMessage = productMessage;
+	}
+	public String getDataValue() {
+		return productId;
+	}
+	public void setDataValue(String productId) {
+		this.productId = productId;
+	}
+	
+}

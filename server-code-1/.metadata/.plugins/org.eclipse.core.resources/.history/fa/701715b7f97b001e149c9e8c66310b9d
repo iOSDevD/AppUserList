@@ -1,0 +1,7 @@
+package com.userlist.home;
+
+public class LoginUser {
+
+	private String username;
+	private String password;
+}

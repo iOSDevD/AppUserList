@@ -1,0 +1,10 @@
+package com.userlist.home;
+
+import java.io.Serializable;
+
+public class User implements Serializable{
+
+	private String userFName;
+	private String userLName;	
+	
+}

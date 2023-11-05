@@ -1,0 +1,17 @@
+package com.userlist.jdbc;
+
+public interface AppDAO {
+
+	/*
+	 * Register user
+	 */
+	public String registerUserReturnGuid();
+	
+	/*
+	 * Insert App. Data
+	 */
+	public boolean insertAppData(Object appData);
+	
+	
+	
+}

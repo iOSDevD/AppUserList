@@ -1,0 +1,10 @@
+1698965659950	Rename package 'com.ecw.exception'
+1698965683841	Rename package 'com.ecw.jdbc'
+1698965697706	Rename package 'com.ecw.home'
+1698965718053	Rename package 'com.home.main2'
+1698983974363	Encapsulate field 'userLName'
+1698983979136	Encapsulate field 'userFName'
+1698984063861	Rename type 'InvalidProductException'
+1698984163125	Encapsulate field 'message'
+1699115502455	Delete element
+1699117806271	Rename resource 'docker'

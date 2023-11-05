@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.linuxtools.docker.ui.runDockerImageLaunchConfigurationType">
+    <booleanAttribute key="allocatePseudoTTY" value="false"/>
+    <booleanAttribute key="autoRemove" value="false"/>
+    <stringAttribute key="command" value="mysqld "/>
+    <stringAttribute key="connectionName" value="linuxkit-364fa8531499"/>
+    <stringAttribute key="creationDate" value="2023-11-05 00:00:36"/>
+    <stringAttribute key="entryPoint" value="docker-entrypoint.sh"/>
+    <listAttribute key="envVariables"/>
+    <stringAttribute key="imageId" value="sha256:5d2fb452c483ffe15d4ec362a904fd285ab1f4dedd98b0a38060c87f1d98f582"/>
+    <stringAttribute key="imageName" value="mysql:latest"/>
+    <booleanAttribute key="interactive" value="false"/>
+    <mapAttribute key="labels"/>
+    <listAttribute key="links"/>
+    <booleanAttribute key="privileged" value="false"/>
+    <booleanAttribute key="publishAllPorts" value="true"/>
+    <listAttribute key="publishedPorts">
+        <listEntry value="3306/tcp::3306"/>
+        <listEntry value="33060/tcp::33060"/>
+    </listAttribute>
+    <booleanAttribute key="readonly" value="false"/>
+    <listAttribute key="volumes"/>
+</launchConfiguration>

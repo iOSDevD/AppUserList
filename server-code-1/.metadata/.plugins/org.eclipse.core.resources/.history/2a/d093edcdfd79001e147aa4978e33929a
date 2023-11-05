@@ -1,0 +1,17 @@
+package com.userlist.home;
+
+public class InvalidUserException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private String message;
+	
+	public InvalidUserException(String productId,String productMessage){
+		this.productMessage=productMessage;
+	}
+	
+	
+}

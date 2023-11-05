@@ -1,0 +1,6 @@
+package com.userlist.home;
+
+public class LoginUser {
+
+	private var username;
+}

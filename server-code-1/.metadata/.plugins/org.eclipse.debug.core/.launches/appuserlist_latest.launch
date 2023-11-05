@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.linuxtools.docker.ui.runDockerImageLaunchConfigurationType">
+    <booleanAttribute key="allocatePseudoTTY" value="false"/>
+    <booleanAttribute key="autoRemove" value="false"/>
+    <stringAttribute key="command" value="catalina.sh run "/>
+    <stringAttribute key="connectionName" value="linuxkit-364fa8531499"/>
+    <stringAttribute key="creationDate" value="2023-11-05 00:10:59"/>
+    <stringAttribute key="entryPoint" value=""/>
+    <listAttribute key="envVariables"/>
+    <stringAttribute key="imageId" value="sha256:4d97925fb1f405779c5af58591bf97320878b37c65f8285b8ad64979e4806eb0"/>
+    <stringAttribute key="imageName" value="appuserlist:latest"/>
+    <booleanAttribute key="interactive" value="false"/>
+    <mapAttribute key="labels"/>
+    <listAttribute key="links"/>
+    <booleanAttribute key="privileged" value="false"/>
+    <booleanAttribute key="publishAllPorts" value="true"/>
+    <listAttribute key="publishedPorts">
+        <listEntry value="8080/tcp::8080"/>
+        <listEntry value="8090/tcp::8090"/>
+    </listAttribute>
+    <booleanAttribute key="readonly" value="false"/>
+    <listAttribute key="volumes"/>
+</launchConfiguration>
