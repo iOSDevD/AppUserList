@@ -17,6 +17,10 @@ jobs:
         with:
           version: '6.40.0'
           sourcePath: 'server-code-1/AppUserList/src/main/java'    
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+            sarif_file: pmd-report.sarif
       # - with: 
       
       # with:
