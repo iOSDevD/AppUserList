@@ -8,4 +8,5 @@ public class TestUserExample {
 	public void doOtherThing() {  }
 	
 	public void doOtherThing2() {  }
+	
 }
