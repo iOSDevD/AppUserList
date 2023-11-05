@@ -4,5 +4,6 @@ package com.userlist.home;
 public class TestUserExample {
 	
 	public void doSomething() { }
+	
 	public void doOtherThing() {  }
 }
