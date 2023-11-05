@@ -2,6 +2,13 @@ package com.userlist.constants;
 
 import java.util.ArrayList;
 
+/**
+ * @author Nikunj.Upadhyay
+ * 
+ * CS-763 Project - AppUserList
+ * 
+ * A User Constants file. 
+ */
 public class UsersConstants {
 
 	private static final ArrayList<String> userTypes=new ArrayList<String>();

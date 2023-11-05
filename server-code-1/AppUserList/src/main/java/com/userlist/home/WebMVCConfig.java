@@ -6,6 +6,15 @@ import org.springframework.web.servlet.config.annotation.ContentNegotiationConfi
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+/**
+ * @author Nikunj.Upadhyay
+ * 
+ * CS-763 Project - AppUserList
+ * 
+ * Spring WebMVCConfig to accept content type 
+ * as JSON.
+ * 
+ */
 @Configuration
 @EnableWebMvc
 public class WebMVCConfig extends WebMvcConfigurerAdapter {

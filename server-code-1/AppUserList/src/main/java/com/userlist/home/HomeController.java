@@ -22,8 +22,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.user.exception.AppError;
 import com.userlist.jdbc.AppJDBCTemplate;
 
+
 /**
- * Handles requests for the application home page.
+ * @author Nikunj.Upadhyay
+ * 
+ * CS-763 Project - AppUserList
+ * 
+ * Main REST Controller for the project that handles login, logout
+ * and fetching User list.
  */
 @RestController
 @RequestMapping(method = RequestMethod.POST)
@@ -91,11 +97,11 @@ public class HomeController {
 	}
 	
 	
-	@ResponseStatus(value=HttpStatus.BAD_REQUEST)
-	@ExceptionHandler(InvalidUserException.class)
-	@ResponseBody AppError handleProductException(HttpServletRequest req,InvalidUserException ex){
-		return new AppError(req.getRequestURI()+" Invalid Product", ex);
-	}
+//	@ResponseStatus(value=HttpStatus.BAD_REQUEST)
+//	@ExceptionHandler(InvalidUserException.class)
+//	@ResponseBody AppError handleProductException(HttpServletRequest req,InvalidUserException ex){
+//		return new AppError(req.getRequestURI()+" Invalid Product", ex);
+//	}
 	
 	
 	 

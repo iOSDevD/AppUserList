@@ -1,10 +1,16 @@
 package com.userlist.home;
 
+/**
+ * @author Nikunj.Upadhyay
+ * 
+ * CS-763 Project - AppUserList
+ * 
+ * LoginUser object used during login with username and password.
+ */
 public class LoginUser {
 
 	private String username;
 	private String password;
-	private String testUser1;
 	
 	public String getPassword() {
 		return password;
