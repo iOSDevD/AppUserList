@@ -17,6 +17,7 @@ jobs:
         with:
           version: '6.40.0'
           sourcePath: 'server-code-1/AppUserList/src/main/java'    
+          rulesets: 'rulesets/java/quickstart.xml'
       # - name: Upload SARIF file
         # uses: github/codeql-action/upload-sarif@v2
         # with:
