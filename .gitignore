@@ -1,2 +1,5 @@
-# Eclipse specific files
+# Eclipse workspace specific files
 server-code-1/.metadata/
+
+# Eclipse Project
+server-code-1/AppUserList/target/
