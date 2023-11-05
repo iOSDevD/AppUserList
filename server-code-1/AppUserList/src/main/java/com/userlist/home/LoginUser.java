@@ -4,6 +4,8 @@ public class LoginUser {
 
 	private String username;
 	private String password;
+	private String testUser1;
+	
 	public String getPassword() {
 		return password;
 	}
