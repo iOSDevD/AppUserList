@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+/Users/nikunjupadhyay/Niks/Myscrap/TransitDocs/CommonDocuments/BU/CS763/Assignment/Assignment1_Project1/server-code-1/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-3249571826.index
-361832468.index
-797935681.index
-4038270466.index
-3733950700.index
-3970305043.index
