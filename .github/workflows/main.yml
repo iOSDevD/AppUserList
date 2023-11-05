@@ -12,7 +12,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '11'
-          src_path: server-code-1/AppUserList/src/main/java    
+      - uses: pmd/pmd-github-action@v1
+        id: pmd
+        with:
+          version: '6.40.0'
+          sourcePath: 'server-code-1/AppUserList/src/main/java'    
       # - with: 
       
       # with:
