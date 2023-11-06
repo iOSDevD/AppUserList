@@ -8,7 +8,7 @@
 import Foundation
 
 enum Constants {
-    static let hostURL = "http://localhost:8080/app/"
+    static let hostURL = "http://localhost:8080/appUserList-1.0.0-BUILD-SNAPSHOT/"
 }
 
 enum Requests {
