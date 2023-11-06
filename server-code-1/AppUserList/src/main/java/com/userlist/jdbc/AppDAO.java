@@ -1,5 +1,8 @@
 package com.userlist.jdbc;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.userlist.home.User;
 
 public interface AppDAO {
@@ -15,6 +18,8 @@ public interface AppDAO {
 	public boolean insertAppData(Object appData);
 	
 	public boolean insertUser(User user);
+	
+	public List<User> fetchAllUsers();
 	
 	
 	

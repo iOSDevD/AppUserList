@@ -1,10 +1,14 @@
 package com.userlist.jdbc;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.userlist.home.User;
+import com.userlist.home.UserRowMapper;
 
 public class AppJDBCTemplate implements AppDAO {
 
@@ -39,6 +43,13 @@ public class AppJDBCTemplate implements AppDAO {
 		String query = String.format("Insert into friends (name) values %s", user.getUserFName()+", "+user.getUserLName());
 		this.jdbcTemplate.execute(query);
 		return false;
+	}
+	
+	@Override
+	public List<User> fetchAllUsers() {
+		String query = String.format("Select * from appUsers");
+		List<User> users= this.jdbcTemplate.query(query, new UserRowMapper());
+		return users;
 	}
 
 }

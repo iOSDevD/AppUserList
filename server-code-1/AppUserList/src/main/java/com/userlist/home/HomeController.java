@@ -1,6 +1,7 @@
 package com.userlist.home;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,17 +10,13 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.user.exception.AppError;
 import com.userlist.jdbc.AppJDBCTemplate;
 
 
@@ -67,6 +64,12 @@ public class HomeController {
 		return responseData;
 	}
 	
+	@RequestMapping(value = "/fetchAppUsers")
+	public @ResponseBody List<User> fetchAppUsers(Locale locale,HttpServletRequest req ,Model model) {
+		logger.info("Fetching all App Users");
+		return this.template.fetchAllUsers();
+	}
+	
 	@RequestMapping(value = "login", method = RequestMethod.POST, produces={"application/json"})
 	public  @ResponseBody HashMap<String, String> login(
 			@RequestBody final LoginUser aUserObject,
@@ -88,23 +91,13 @@ public class HomeController {
 	
 	@RequestMapping(value = "logout", method = RequestMethod.POST,  produces={"application/json"})
 	public @ResponseBody HashMap<String, String> logout(HttpSession session) {
+		
 		HashMap<String, String> logoutStatus=new HashMap<String, String>();
 		logoutStatus.put("status","success");
-		
+		logger.info("Logging out user {} with sessionId {}",session.getAttribute("username"),
+				session.getId());
 		session.removeAttribute("username");
 		session.invalidate();
 		return logoutStatus;
 	}
-	
-	
-//	@ResponseStatus(value=HttpStatus.BAD_REQUEST)
-//	@ExceptionHandler(InvalidUserException.class)
-//	@ResponseBody AppError handleProductException(HttpServletRequest req,InvalidUserException ex){
-//		return new AppError(req.getRequestURI()+" Invalid Product", ex);
-//	}
-	
-	
-	 
-	
-	
 }
