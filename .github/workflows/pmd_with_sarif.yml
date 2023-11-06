@@ -1,0 +1,25 @@
+name: pmd-for-java
+run-name: ${{ github.actor }} is learning PMD For java, with SARIF File
+on: [push]
+jobs:
+  pmd-for-java-job:
+    runs-on: ubuntu-latest
+    steps:
+      # You may pin to the exact commit or the version.
+      # uses: kemsakurai/action-pmd@c6962084feb28d46b1859e9552e5e2f6a96aef73
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+      - uses: pmd/pmd-github-action@v1
+        id: pmd
+        with:
+          version: '6.40.0'
+          sourcePath: 'server-code-1/AppUserList/src/main/java'    
+          rulesets: 'rulesets/java/quickstart.xml'
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+            sarif_file: results.sarif
+            # category: my-analysis-tool
