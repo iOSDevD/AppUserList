@@ -4,6 +4,12 @@ on: [push]
 jobs:
   pmd-for-java-job:
     runs-on: ubuntu-latest
+    permissions:
+      # required for all workflows
+      security-events: write
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
     steps:
       # You may pin to the exact commit or the version.
       # uses: kemsakurai/action-pmd@c6962084feb28d46b1859e9552e5e2f6a96aef73
