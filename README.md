@@ -15,3 +15,9 @@ Server code with includes docker image to run the project
 4.	This will start a web app with url  http://localhost:8080/appUserList-1.0.0-BUILD-SNAPSHOT/
 5.	If there are issues with MYSQL, queries are available in /src/main/db/0.sql and 1.sql
 
+
+
+
+
+https://github.com/iOSDevD/AppUserList/assets/1470780/0cc4cf77-5aa5-4ac5-8a34-27dcb279a58e
+
