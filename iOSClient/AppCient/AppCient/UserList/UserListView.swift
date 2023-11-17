@@ -14,6 +14,8 @@ struct UserListView: View {
     
     @Environment(\.dismiss) private var dismiss
     
+    @EnvironmentObject var userConfig: UserConfigDetails
+    
     var body: some View {
         
         List(model.appUsers) { element in
@@ -25,8 +27,11 @@ struct UserListView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .navigationTitle("App User List")
+        .navigationDestination(isPresented: $model.shouldShowAddNewUser, destination: {
+            AddNewUserView()
+        })
         .toolbar {
-            ToolbarItemGroup {
+            ToolbarItemGroup(placement: .topBarLeading) {
                 Button {
                     Task {
                         await model.logout()
@@ -35,6 +40,15 @@ struct UserListView: View {
                     Text("Logout")
                 }
 
+            }
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                if userConfig.role == .admin {
+                    Button {
+                        model.showAddNewUser()
+                    } label: {
+                        Text("Add New")
+                    }
+                }
             }
         }
         .onAppear {

@@ -12,7 +12,7 @@ enum Constants {
 }
 
 enum Requests {
-    case login, logout, fetchAllUsers
+    case login, logout, fetchAllUsers, addNewUser
 }
 
 extension Requests {
@@ -24,8 +24,11 @@ extension Requests {
             "logout"
         case .fetchAllUsers:
             "fetchAppUsers"
+        case .addNewUser:
+            "addNewUser"
         }
     }
+    
     func makeRequest<T:Codable>(input: T) -> URLRequest {
     
         let url = URL(string: "\(Constants.hostURL)\(self.path)")!

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D19AA4C12B05B47B00CBA3D0 /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C02B05B47B00CBA3D0 /* AddNewUserView.swift */; };
+		D19AA4C32B05B4BD00CBA3D0 /* AddNewUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C22B05B4BD00CBA3D0 /* AddNewUserViewModel.swift */; };
+		D19AA4C62B05B81100CBA3D0 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */; };
+		D19AA4C92B05F48400CBA3D0 /* AddNewUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C82B05F48400CBA3D0 /* AddNewUserRequest.swift */; };
 		D1AFE6532AF87FF800BAAE2D /* AppCientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFE6522AF87FF800BAAE2D /* AppCientApp.swift */; };
 		D1AFE6552AF87FF800BAAE2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFE6542AF87FF800BAAE2D /* ContentView.swift */; };
 		D1AFE6572AF87FFA00BAAE2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1AFE6562AF87FFA00BAAE2D /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D19AA4C02B05B47B00CBA3D0 /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
+		D19AA4C22B05B4BD00CBA3D0 /* AddNewUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewModel.swift; sourceTree = "<group>"; };
+		D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		D19AA4C82B05F48400CBA3D0 /* AddNewUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserRequest.swift; sourceTree = "<group>"; };
 		D1AFE64F2AF87FF800BAAE2D /* AppCient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AFE6522AF87FF800BAAE2D /* AppCientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCientApp.swift; sourceTree = "<group>"; };
 		D1AFE6542AF87FF800BAAE2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +91,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D19AA4BF2B05B47000CBA3D0 /* AddUser */ = {
+			isa = PBXGroup;
+			children = (
+				D19AA4C02B05B47B00CBA3D0 /* AddNewUserView.swift */,
+				D19AA4C22B05B4BD00CBA3D0 /* AddNewUserViewModel.swift */,
+				D19AA4C82B05F48400CBA3D0 /* AddNewUserRequest.swift */,
+			);
+			path = AddUser;
+			sourceTree = "<group>";
+		};
+		D19AA4C42B05B80700CBA3D0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D1AFE6462AF87FF800BAAE2D = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +132,8 @@
 		D1AFE6512AF87FF800BAAE2D /* AppCient */ = {
 			isa = PBXGroup;
 			children = (
+				D19AA4C42B05B80700CBA3D0 /* Helpers */,
+				D19AA4BF2B05B47000CBA3D0 /* AddUser */,
 				D1AFE68A2AF89F1500BAAE2D /* Login */,
 				D1AFE6852AF89EAF00BAAE2D /* Network */,
 				D1AFE6802AF88E8A00BAAE2D /* UserList */,
@@ -299,6 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19AA4C32B05B4BD00CBA3D0 /* AddNewUserViewModel.swift in Sources */,
+				D19AA4C92B05F48400CBA3D0 /* AddNewUserRequest.swift in Sources */,
 				D1AFE6872AF89EB700BAAE2D /* NetWorkClient.swift in Sources */,
 				D1AFE6552AF87FF800BAAE2D /* ContentView.swift in Sources */,
 				D1AFE6532AF87FF800BAAE2D /* AppCientApp.swift in Sources */,
@@ -306,7 +336,9 @@
 				D1AFE67F2AF88B2A00BAAE2D /* UserListView.swift in Sources */,
 				D1AFE6892AF89EE300BAAE2D /* Requests.swift in Sources */,
 				D1AFE6842AF8992E00BAAE2D /* AppUser.swift in Sources */,
+				D19AA4C12B05B47B00CBA3D0 /* AddNewUserView.swift in Sources */,
 				D1AFE6822AF88E9900BAAE2D /* UserListViewModel.swift in Sources */,
+				D19AA4C62B05B81100CBA3D0 /* String+Crypto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

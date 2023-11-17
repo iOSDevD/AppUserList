@@ -12,10 +12,11 @@ struct ContentView: View {
     @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack
+        {
             VStack {
                 NavigationLink(destination:
-                                UserListView(userName: viewModel.userName),
+                                UserListView(userName: viewModel.userName).environmentObject(viewModel.loginUserConfig),
                                isActive: $viewModel.loginSuccess) {
                      EmptyView()
                 }.hidden()

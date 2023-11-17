@@ -17,6 +17,8 @@ class UserListViewModel: ObservableObject {
     
     @Published var appUsers: [AppUser] = []
     
+    @Published var shouldShowAddNewUser: Bool = false
+    
     init() {
         self.userName = ""
     }
@@ -27,10 +29,10 @@ class UserListViewModel: ObservableObject {
     func logout() async {
         let request = Requests.logout.makeRequest(input: LogoutRequest(username: self.userName))
         
-        let response: LoginResponse? = await client.connect(request: request)
+        let response: [String: String]? = await client.connect(request: request)
         
         DispatchQueue.main.async { [response, unowned self] in
-            if let response = response, response.isSuccess {
+            if let response = response, let status = response["status"], status == "success" {
                 logoutStatus.toggle()
             } 
         }
@@ -49,6 +51,10 @@ class UserListViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func showAddNewUser() {
+        self.shouldShowAddNewUser = true
     }
 }
 

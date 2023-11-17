@@ -15,14 +15,17 @@ class LoginViewModel: ObservableObject {
     
     private let client = NetWorkClient()
     
+    var loginUserConfig = UserConfigDetails()
+    
     func login() async {
-        let requestBody = ["username" : self.userName, "password": self.password]
+        let requestBody = ["username" : self.userName, "password": self.password.md5]
         let request = Requests.login.makeRequest(input: requestBody)
         let response: LoginResponse? = await client.connect(request: request)
         
         DispatchQueue.main.async { [response, unowned self] in
             if let response = response, response.isSuccess {
-                loginSuccess.toggle()
+                loginUserConfig.role = response.userRole
+                loginSuccess = true
                 userName = ""
                 password = ""
             } else {
@@ -36,8 +39,26 @@ class LoginViewModel: ObservableObject {
 
 struct LoginResponse: Codable {
     var status: String
+    var role: String
     
     var isSuccess: Bool {
         status == "success"
     }
+    
+    var userRole: Role {
+        switch role {
+        case "1":
+            return .admin
+        default:
+            return .staff
+        }
+    }
+}
+
+class UserConfigDetails: ObservableObject {
+    @Published var role: Role = .staff
+}
+
+enum Role  {
+    case admin, staff
 }

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.userlist.jdbc.AppJDBCTemplate;
+import com.userlist.pojos.AccountDetails;
 
 
 /**
@@ -36,10 +37,10 @@ public class HomeController {
 	@Autowired
 	private AppJDBCTemplate template;
 	
-	@RequestMapping(value="/registerUser")
+	@RequestMapping(value="/addNewUser")
 	public HashMap<String, String> registerUser(@RequestBody final User aUserObject) throws Exception{
 		
-		HashMap<String, String> people=new HashMap<String, String>();
+		HashMap<String, String> response=new HashMap<String, String>();
 
 		if(aUserObject.getUserFName().isEmpty()){
 			throw new InvalidUserException("Missing First Name");
@@ -48,10 +49,15 @@ public class HomeController {
 			throw new InvalidUserException("Missing Last Name");
 			
 		}else{
-			this.template.insertAppData(null);
+			boolean added = this.template.insertUser(aUserObject);
+			if(added) {
+				response.put("status", "success");
+			} else {
+				response.put("status", "failed");
+			}
 			System.out.println("Temp "+template);
 		}
-		return people;
+		return response;
 	}
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -79,13 +85,15 @@ public class HomeController {
 //			session.invalidate();
 //		}
 		HashMap<String, String> loginStatus=new HashMap<String, String>();
-		if(aUserObject.getUsername().equalsIgnoreCase("acc1") && aUserObject.getPassword().equalsIgnoreCase("123")) {
+		AccountDetails accountDetail = this.template.validateAccount(aUserObject);
+		if(accountDetail!=null) {
 			session.setAttribute("username", aUserObject.getUsername());
 			loginStatus.put("status","success");
-			return loginStatus; 
+			loginStatus.put("role",String.valueOf(accountDetail.getRole()));
+			return loginStatus;
 		} else {
 			loginStatus.put("status","failed");
-			return loginStatus; 
+			return loginStatus;
 		}
 	}
 	

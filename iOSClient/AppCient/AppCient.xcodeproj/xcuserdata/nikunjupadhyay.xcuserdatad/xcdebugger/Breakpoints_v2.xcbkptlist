@@ -7,47 +7,124 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "26920225-D278-476E-A9CB-0B93F9AC319B"
+            uuid = "3316B4FA-0302-4959-B2C7-7381555F87A7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppCient/UserList/UserListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "fetchList()"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "showAddNewUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74B5BF1E-BE46-4A22-8C05-277516508887"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppCient/UserList/UserListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "logout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13366FFA-0804-485D-A168-99E87E96210F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppCient/UserList/UserListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "logout()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "26920225-D278-476E-A9CB-0B93F9AC319B - 2cf168a5016a76d4"
+                  uuid = "13366FFA-0804-485D-A168-99E87E96210F - f2dd44ee7937c12f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in AppCient.UserListViewModel.fetchList() -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in AppCient.UserListViewModel.logout() async -&gt; ()"
                   moduleName = "AppCient"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nikunjupadhyay/Niks/Myscrap/TransitDocs/CommonDocuments/BU/CS763/Assignment/Assignment1_Project1/iOSClient/AppCient/AppCient/UserList/UserListViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "196">
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
-                  uuid = "26920225-D278-476E-A9CB-0B93F9AC319B - a6a30f7fc57c659a"
+                  uuid = "13366FFA-0804-485D-A168-99E87E96210F - f2dd44ee7937c12f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in AppCient.UserListViewModel.fetchList() -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in AppCient.UserListViewModel.logout() async -&gt; ()"
                   moduleName = "AppCient"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nikunjupadhyay/Niks/Myscrap/TransitDocs/CommonDocuments/BU/CS763/Assignment/Assignment1_Project1/iOSClient/AppCient/AppCient/UserList/UserListViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "60">
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "13366FFA-0804-485D-A168-99E87E96210F - f2dd44ee7937c12f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in AppCient.UserListViewModel.logout() async -&gt; ()"
+                  moduleName = "AppCient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nikunjupadhyay/Niks/Myscrap/TransitDocs/CommonDocuments/BU/CS763/Assignment/Assignment1_Project1/iOSClient/AppCient/AppCient/UserList/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "13366FFA-0804-485D-A168-99E87E96210F - f2dd44ee7937c12f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in AppCient.UserListViewModel.logout() async -&gt; ()"
+                  moduleName = "AppCient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nikunjupadhyay/Niks/Myscrap/TransitDocs/CommonDocuments/BU/CS763/Assignment/Assignment1_Project1/iOSClient/AppCient/AppCient/UserList/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "13366FFA-0804-485D-A168-99E87E96210F - f2dd44ee7937c12f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in AppCient.UserListViewModel.logout() async -&gt; ()"
+                  moduleName = "AppCient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nikunjupadhyay/Niks/Myscrap/TransitDocs/CommonDocuments/BU/CS763/Assignment/Assignment1_Project1/iOSClient/AppCient/AppCient/UserList/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "332">
                </Location>
             </Locations>
          </BreakpointContent>
