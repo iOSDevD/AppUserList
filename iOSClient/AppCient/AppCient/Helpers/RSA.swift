@@ -39,7 +39,7 @@ func loadPublicKey() throws -> SecKey {
 
 // Example usage
 
-func encrypt(inputText: String = "Baeldung secret message") {
+func encrypt(inputText: String = "Some message to test") {
     do {
         let publicKey = try loadPublicKey()
         let plaintext = inputText.data(using: .utf8)!

@@ -9,8 +9,8 @@ import Foundation
 import Auth0
 
 class AuthConfig {
-    static let clientId = "HRJ2VjKJjVDjkMaTYvZNtS3eweDY80gz";
-    static let domain = "dev-2gxnsro8rc2skala.us.auth0.com";
+    static let clientId = "XXX";
+    static let domain = "XX";
 }
 
 class AppSessionDetails {

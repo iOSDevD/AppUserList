@@ -23,14 +23,9 @@ struct ContentView: View {
                                isActive: $viewModel.loginSuccess) {
                      EmptyView()
                 }.hidden()
-//                TextField("User Name", text: $viewModel.userName)
-//                    .textFieldStyle(.roundedBorder)
-//                SecureField("Password", text: $viewModel.password)
-//                    .textFieldStyle(.roundedBorder)
                 
                 Button("Login") {
                     Task {
-                        //await viewModel.login()
                         Auth0
                             .webAuth(clientId: AuthConfig.clientId, domain: AuthConfig.domain)
                             .start { result in
@@ -48,8 +43,6 @@ struct ContentView: View {
                 }.buttonStyle(BorderedButtonStyle())
             }
             .padding()
-        }.onAppear {
-            encrypt()
         }
     }
 }
