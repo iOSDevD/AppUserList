@@ -2,7 +2,7 @@ package com.userlist.jdbc;
 
 import java.util.List;
 
-import com.userlist.home.LoginUser;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.userlist.home.User;
 import com.userlist.pojos.AccountDetails;
 
@@ -22,6 +22,6 @@ public interface AppDAO {
 	
 	public List<User> fetchAllUsers();
 	
-	public AccountDetails validateAccount(LoginUser account);
+	public AccountDetails validateAccountWithToken(DecodedJWT token);
 	
 }

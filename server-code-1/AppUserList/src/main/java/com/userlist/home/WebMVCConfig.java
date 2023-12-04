@@ -9,10 +9,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 /**
  * @author Nikunj.Upadhyay
  * 
- * CS-763 Project - AppUserList
+ *         CS-763 Project - AppUserList
  * 
- * Spring WebMVCConfig to accept content type 
- * as JSON.
+ *         Spring WebMVCConfig to accept content type as JSON.
  * 
  */
 @Configuration
@@ -20,12 +19,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class WebMVCConfig extends WebMvcConfigurerAdapter {
 
 	@Override
-	public void configureContentNegotiation(
-			ContentNegotiationConfigurer configurer) {
-	    configurer.favorPathExtension(true).
-        favorParameter(false).
-        ignoreAcceptHeader(true).
-        defaultContentType(MediaType.APPLICATION_JSON);		
+	public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+		configurer.favorPathExtension(true).favorParameter(false).ignoreAcceptHeader(true)
+				.defaultContentType(MediaType.APPLICATION_JSON);
 	}
-	
 }

@@ -35,7 +35,10 @@ extension Requests {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
+        
+        request.setValue("Bearer: \(AppSessionDetails.shared.acessToken)", forHTTPHeaderField: "Authorization") // Set Access Token for each request.
         
         request.httpBody = try! JSONEncoder().encode(input)
         return request

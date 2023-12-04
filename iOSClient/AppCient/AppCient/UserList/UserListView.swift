@@ -10,7 +10,6 @@ import SwiftUI
 struct UserListView: View {
     
     @StateObject var model = UserListViewModel()
-    var userName: String
     
     @Environment(\.dismiss) private var dismiss
     
@@ -52,7 +51,6 @@ struct UserListView: View {
             }
         }
         .onAppear {
-            model.setLoggedInUser(userName: self.userName)
             model.fetchList()
         }.onChange(of: model.logoutStatus) { _ in
             dismiss()
@@ -61,5 +59,5 @@ struct UserListView: View {
 }
 
 #Preview {
-    UserListView(userName: "")
+    UserListView()
 }

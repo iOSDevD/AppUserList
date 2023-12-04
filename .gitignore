@@ -9,3 +9,8 @@ server-code-1/AppUserList/data/
 **/.DS_Store
 **/.xcuserstate
 
+# Ignore API Keys and Secrets
+application-dev.properties
+.metadata
+*.key
+*.pem

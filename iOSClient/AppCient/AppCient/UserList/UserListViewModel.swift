@@ -6,10 +6,9 @@
 //
 
 import Foundation
+import Auth0
 
 class UserListViewModel: ObservableObject {
-    
-    var userName: String
     
     private let client = NetWorkClient()
     
@@ -19,15 +18,13 @@ class UserListViewModel: ObservableObject {
     
     @Published var shouldShowAddNewUser: Bool = false
     
-    init() {
-        self.userName = ""
-    }
-    func setLoggedInUser(userName: String) {
-        self.userName = userName
-    }
+
     
     func logout() async {
-        let request = Requests.logout.makeRequest(input: LogoutRequest(username: self.userName))
+        let emptyBody: [String: String] = [:]
+        let request = Requests.logout.makeRequest(input: emptyBody)
+        
+        try? await Auth0.webAuth().clearSession()
         
         let response: [String: String]? = await client.connect(request: request)
         

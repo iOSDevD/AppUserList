@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11C692C2B1BF3E8001D3E97 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = D11C692B2B1BF3E8001D3E97 /* Auth0 */; };
+		D11C692F2B1BF407001D3E97 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11C692E2B1BF407001D3E97 /* AuthConfig.swift */; };
+		D11C69322B1C4D08001D3E97 /* RSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11C69312B1C4D08001D3E97 /* RSA.swift */; };
+		D11C69382B1C4E4C001D3E97 /* public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D11C69372B1C4E4C001D3E97 /* public_key.pem */; };
 		D19AA4C12B05B47B00CBA3D0 /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C02B05B47B00CBA3D0 /* AddNewUserView.swift */; };
 		D19AA4C32B05B4BD00CBA3D0 /* AddNewUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C22B05B4BD00CBA3D0 /* AddNewUserViewModel.swift */; };
 		D19AA4C62B05B81100CBA3D0 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D11C692E2B1BF407001D3E97 /* AuthConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
+		D11C69302B1BF523001D3E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D11C69312B1C4D08001D3E97 /* RSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSA.swift; sourceTree = "<group>"; };
+		D11C69372B1C4E4C001D3E97 /* public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_key.pem; sourceTree = "<group>"; };
 		D19AA4C02B05B47B00CBA3D0 /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
 		D19AA4C22B05B4BD00CBA3D0 /* AddNewUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewModel.swift; sourceTree = "<group>"; };
 		D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11C692C2B1BF3E8001D3E97 /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D11C692D2B1BF3FB001D3E97 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D11C692E2B1BF407001D3E97 /* AuthConfig.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		D19AA4BF2B05B47000CBA3D0 /* AddUser */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +121,9 @@
 		D19AA4C42B05B80700CBA3D0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D11C69372B1C4E4C001D3E97 /* public_key.pem */,
 				D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */,
+				D11C69312B1C4D08001D3E97 /* RSA.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -132,6 +151,8 @@
 		D1AFE6512AF87FF800BAAE2D /* AppCient */ = {
 			isa = PBXGroup;
 			children = (
+				D11C69302B1BF523001D3E97 /* Info.plist */,
+				D11C692D2B1BF3FB001D3E97 /* Auth */,
 				D19AA4C42B05B80700CBA3D0 /* Helpers */,
 				D19AA4BF2B05B47000CBA3D0 /* AddUser */,
 				D1AFE68A2AF89F1500BAAE2D /* Login */,
@@ -213,6 +234,9 @@
 			dependencies = (
 			);
 			name = AppCient;
+			packageProductDependencies = (
+				D11C692B2B1BF3E8001D3E97 /* Auth0 */,
+			);
 			productName = AppCient;
 			productReference = D1AFE64F2AF87FF800BAAE2D /* AppCient.app */;
 			productType = "com.apple.product-type.application";
@@ -285,6 +309,9 @@
 				Base,
 			);
 			mainGroup = D1AFE6462AF87FF800BAAE2D;
+			packageReferences = (
+				D11C692A2B1BF3E8001D3E97 /* XCRemoteSwiftPackageReference "Auth0" */,
+			);
 			productRefGroup = D1AFE6502AF87FF800BAAE2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11C69382B1C4E4C001D3E97 /* public_key.pem in Resources */,
 				D1AFE65A2AF87FFA00BAAE2D /* Preview Assets.xcassets in Resources */,
 				D1AFE6572AF87FFA00BAAE2D /* Assets.xcassets in Resources */,
 			);
@@ -333,9 +361,11 @@
 				D1AFE6552AF87FF800BAAE2D /* ContentView.swift in Sources */,
 				D1AFE6532AF87FF800BAAE2D /* AppCientApp.swift in Sources */,
 				D1AFE67D2AF8801B00BAAE2D /* LoginViewModel.swift in Sources */,
+				D11C692F2B1BF407001D3E97 /* AuthConfig.swift in Sources */,
 				D1AFE67F2AF88B2A00BAAE2D /* UserListView.swift in Sources */,
 				D1AFE6892AF89EE300BAAE2D /* Requests.swift in Sources */,
 				D1AFE6842AF8992E00BAAE2D /* AppUser.swift in Sources */,
+				D11C69322B1C4D08001D3E97 /* RSA.swift in Sources */,
 				D19AA4C12B05B47B00CBA3D0 /* AddNewUserView.swift in Sources */,
 				D1AFE6822AF88E9900BAAE2D /* UserListViewModel.swift in Sources */,
 				D19AA4C62B05B81100CBA3D0 /* String+Crypto.swift in Sources */,
@@ -504,6 +534,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppCient/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppCient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -532,6 +563,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppCient/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppCient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -662,6 +694,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D11C692A2B1BF3E8001D3E97 /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D11C692B2B1BF3E8001D3E97 /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D11C692A2B1BF3E8001D3E97 /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1AFE6472AF87FF800BAAE2D /* Project object */;
 }
