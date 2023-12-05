@@ -29,7 +29,7 @@ public class RSAMain {
 
 	}
 
-	static String encryptText() {
+	public static String encryptText() {
 		String encryptedMessage = "";
 		try {
 			String secretMessage = "Some Message to Encrypt";
@@ -66,7 +66,7 @@ public class RSAMain {
 
 	}
 
-	static String decrypt(String encryptedMessage) {
+	public static String decrypt(String encryptedMessage) {
 
 		String result = "";
 
@@ -74,11 +74,11 @@ public class RSAMain {
 
 			Cipher decryptCipher = Cipher.getInstance("RSA");
 
-			String publicKeyString = getFile("/private_key.pem");
+			String privateKeyString = getFile("/private_key.pem");
 
-			publicKeyString = publicKeyString.replaceAll("-----BEGIN (.*)-----|-----END (.*)-----|\\s", "");
+			privateKeyString = privateKeyString.replaceAll("-----BEGIN (.*)-----|-----END (.*)-----|\\s", "");
 
-			byte[] keyBytes = Base64.getDecoder().decode(publicKeyString);
+			byte[] keyBytes = Base64.getDecoder().decode(privateKeyString);
 			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 
 			EncodedKeySpec publicKeySpec = new PKCS8EncodedKeySpec(keyBytes);
