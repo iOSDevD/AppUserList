@@ -13,7 +13,6 @@
 		D11C69382B1C4E4C001D3E97 /* public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = D11C69372B1C4E4C001D3E97 /* public_key.pem */; };
 		D19AA4C12B05B47B00CBA3D0 /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C02B05B47B00CBA3D0 /* AddNewUserView.swift */; };
 		D19AA4C32B05B4BD00CBA3D0 /* AddNewUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C22B05B4BD00CBA3D0 /* AddNewUserViewModel.swift */; };
-		D19AA4C62B05B81100CBA3D0 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */; };
 		D19AA4C92B05F48400CBA3D0 /* AddNewUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19AA4C82B05F48400CBA3D0 /* AddNewUserRequest.swift */; };
 		D1AFE6532AF87FF800BAAE2D /* AppCientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFE6522AF87FF800BAAE2D /* AppCientApp.swift */; };
 		D1AFE6552AF87FF800BAAE2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFE6542AF87FF800BAAE2D /* ContentView.swift */; };
@@ -54,7 +53,6 @@
 		D11C69372B1C4E4C001D3E97 /* public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_key.pem; sourceTree = "<group>"; };
 		D19AA4C02B05B47B00CBA3D0 /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
 		D19AA4C22B05B4BD00CBA3D0 /* AddNewUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewModel.swift; sourceTree = "<group>"; };
-		D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
 		D19AA4C82B05F48400CBA3D0 /* AddNewUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserRequest.swift; sourceTree = "<group>"; };
 		D1AFE64F2AF87FF800BAAE2D /* AppCient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AFE6522AF87FF800BAAE2D /* AppCientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCientApp.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				D11C69372B1C4E4C001D3E97 /* public_key.pem */,
-				D19AA4C52B05B81100CBA3D0 /* String+Crypto.swift */,
 				D11C69312B1C4D08001D3E97 /* RSA.swift */,
 			);
 			path = Helpers;
@@ -368,7 +365,6 @@
 				D11C69322B1C4D08001D3E97 /* RSA.swift in Sources */,
 				D19AA4C12B05B47B00CBA3D0 /* AddNewUserView.swift in Sources */,
 				D1AFE6822AF88E9900BAAE2D /* UserListViewModel.swift in Sources */,
-				D19AA4C62B05B81100CBA3D0 /* String+Crypto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
