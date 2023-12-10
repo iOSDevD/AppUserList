@@ -14,3 +14,6 @@ application-dev.properties
 .metadata
 *.key
 *.pem
+server-code-1/.sonarlint
+server-code-1/AppUserList/.settings
+server-code-1/Servers
