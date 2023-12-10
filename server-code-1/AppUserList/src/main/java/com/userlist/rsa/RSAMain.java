@@ -34,7 +34,7 @@ public class RSAMain {
 		try {
 			String secretMessage = "Some Message to Encrypt";
 
-			Cipher encryptCipher = Cipher.getInstance("RSA");
+			Cipher encryptCipher = Cipher.getInstance("RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING");
 
 			String publicKeyString = getFile("/public.key");
 
@@ -72,7 +72,7 @@ public class RSAMain {
 
 		try {
 
-			Cipher decryptCipher = Cipher.getInstance("RSA");
+			Cipher decryptCipher = Cipher.getInstance("RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING");
 
 			String privateKeyString = getFile("/private_key.pem");
 
