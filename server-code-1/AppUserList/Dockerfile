@@ -10,7 +10,7 @@ RUN mvn -f /home/app/pom.xml package
 
 # Install Tomcat    & openjdk 8 (openjdk has java and javac)
 #FROM tomcat:jdk8-openjdk
-FROM tomcat:8.5.69-jdk8-openjdk
+FROM tomcat:8.5.81-jdk8-openjdk
 # Copy source files to tomcat folder structure
 COPY --from=build /home/app/target/appUserList-1.0.0-BUILD-SNAPSHOT.war /usr/local/tomcat/webapps/
 
